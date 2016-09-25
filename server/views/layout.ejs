@@ -1,0 +1,19 @@
+<html>
+
+    <head>
+        <title>Webpack scaffold</title>
+    </head>
+
+    <body>
+
+        <div id="react-root"></div>
+
+        <%- body %>
+
+        <% if(env.production){ %>
+            <script async src="<%= env.assets.main.js %>"></script>
+            <% } else{ %>
+            <script src="http://localhost:3000/client/main.js"></script>
+        <% } %>
+    </body>
+</html>

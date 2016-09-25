@@ -1,0 +1,161 @@
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+   -webkit-border-top-left-radius: $radius;
+   border-top-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+     -webkit-border-top-right-radius: $radius;
+     border-top-right-radius: $radius;
+     background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+   border-bottom-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+     -webkit-border-top-left-radius: $radius;
+     border-top-left-radius: $radius;
+     background-clip: padding-box;
+}
+
+@mixin transition-all($time: 300ms) {
+    -webkit-transition:all $time;
+    -moz-transition:all $time;
+    -o-transition:all $time;
+    transition:all $time;
+}
+
+@mixin transition($parameter...) {
+    -webkit-transition:$parameter;
+    -moz-transition:$parameter;
+    -o-transition:$parameter;
+    transition:$parameter;
+}
+
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+@mixin border-box(){
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin content-box(){
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+@mixin background-noise() {
+    background-image: url('data:image/png;base64,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');
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+        white-space: nowrap;
+        height: 0;
+        max-height: 0;
+    }
+}
+
+@mixin textunselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+@mixin textselect {
+    -webkit-touch-callout: default;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+}
+
+@mixin opacity($trans) {
+    opacity: $trans;
+}
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        color: $color;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        color: $color;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+@mixin mediamax($max) {
+    @media only screen and (max-width: $max) { @content; }
+}
+
+@mixin mediamin($min) {
+    @media only screen and (min-width: $min) { @content; }
+}
+
+@mixin media($min, $max) {
+    @media only screen and (min-width: $min) and (max-width: $max) { @content; }
+}
+
+@mixin filter($var) {
+  -webkit-filter: $var;
+  -moz-filter: $var;
+  -ms-filter: $var;
+  -o-filter: $var;
+  filter: $var;
+}
+
+@mixin body-text{
+    display: block;
+    @include fontSize(18px);
+    line-height: 30px;
+    margin: 0 0 35px;
+}

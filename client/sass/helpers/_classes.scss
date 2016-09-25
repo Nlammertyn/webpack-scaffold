@@ -1,0 +1,52 @@
+//Base classes
+@import "mixins";
+
+*{
+    @include border-box();
+    @include fontSize(16px);
+    vertical-align: top;
+}
+
+*::-moz-focus-inner {
+    border: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, span{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+a{
+    text-decoration: none !important;
+    outline: none;
+
+    &:visited, &:focus, &:link, &:active{
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+html{
+    font-size: 100%;
+}
+
+html, html a, html button, html input{
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+pre{
+    background: none;
+}
