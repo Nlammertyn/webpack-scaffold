@@ -1,5 +1,3 @@
-"use strict";
-
 import "sass/app.scss";
 
 import React from "react";

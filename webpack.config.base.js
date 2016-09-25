@@ -39,6 +39,10 @@ module.exports = {
         extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
     },
 
+    eslint: {
+        configFile: './.eslintrc.json'
+    },
+
     plugins: [
         new webpack.DefinePlugin({
             __DEV__: env.development,

@@ -1,0 +1,52 @@
+{
+    "root": true,
+    "env": {
+        "browser": false,
+        "commonjs": false,
+        "es6": true,
+        "node": true
+    },
+    "installedESLint": true,
+    "parserOptions": {
+        "ecmaFeatures": {
+            "globalReturn": false,
+            "impliedStrict": true,
+            "jsx": true,
+            "experimentalObjectRestSpread ": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        /*// Possible Errors
+        // --------------------
+        "comma-dangle": ["error", "never"],
+        "valid-jsdoc": ["error", {
+            "requireReturn": false,
+            "prefer": {
+                "return": "returns"
+            }
+            }],
+            // Best Practices
+            // --------------------
+            // Strict Mode
+            // --------------------
+            "strict": ["error", "safe"], // require "use strict" globally when inside a module wrapper and in function scopes everywhere else
+            // Variables
+            // --------------------
+            "no-shadow-restricted-names": "error",
+            // Node.js and CommonJS
+            // --------------------
+            // Stylistic Issues
+            // --------------------
+            "indent": ["error", 2],
+            "jsx-quotes": ["error", "prefer-double"],
+            "linebreak-style": ["error", "unix"],
+            "quotes": ["error", "single"],
+            "semi": ["error", "always"]
+            // ECMAScript 6
+            // --------------------*/
+        }
+    }
