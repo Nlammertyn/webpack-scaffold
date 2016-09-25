@@ -1,14 +1,17 @@
-import React, {Component} from "react";
+import React from "react";
+import TestComponent from "./test.jsx";
 
-class IndexComponent extends Component{
+export default class IndexComponent extends React.Component{
 
     render(){
         return(
             <section>
                 <h2>Webpack scaffold</h2>
+
+                <div className="test-component">
+                    <TestComponent/>
+                </div>
             </section>
         );
     }
 };
-
-export default IndexComponent;
