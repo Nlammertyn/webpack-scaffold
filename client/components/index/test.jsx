@@ -31,7 +31,7 @@ var templateComponent = React.createClass({
 
     // Created
     componentWillMount: function(){
-
+        var t = this;
     },
 
     // Rendered
@@ -42,8 +42,7 @@ var templateComponent = React.createClass({
     // Events
     events: {
         testHandler: function(e){
-            var t = this;
-            console.log("test");
+            this.props.parentActions.getBreadcrumbs();
         }
     },
 
@@ -58,8 +57,8 @@ var templateComponent = React.createClass({
 
         // HTML
         return(
-            <div className={testClasses} onClick={t.events.testHandler}>
-                Test
+            <div className={testClasses} onClick={t.events.testHandler.bind(this)}>
+                Test: {this.props.data.test}
             </div>
         );
     }
